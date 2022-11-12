@@ -1,0 +1,26 @@
+// color-list
+@import './utils/variables';
+
+// reset-styles and base-styles
+@import './base/base';
+
+// Header
+@import './layout/header';
+
+// Main-page
+@import './components/main-page/hero';
+@import './components/main-page/benefits';
+@import './components/main-page/work';
+@import './components/main-page/command';
+@import './components/main-page/clients';
+
+// Portfolio-page
+@import './components/portfolio-page/filter';
+@import './components/portfolio-page/project';
+
+// Modal-window
+@import './layout/modal';
+@import './layout/modal-content';
+
+// Footer
+@import './layout/footer';

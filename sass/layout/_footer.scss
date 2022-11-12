@@ -1,0 +1,122 @@
+.footer {
+  background-color: var(--dark-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.logo-footer {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  text-decoration: none;
+  color: var(--white-text);
+
+  display: block;
+  margin-bottom: 20px;
+}
+.address-list {
+  list-style-type: none;
+  .item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    text-decoration: none;
+    color: var(--footer-text);
+
+    transition: color var(--hover-duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  [rel] {
+    color: var(--white-text);
+  }
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-address-container {
+  margin-right: 70px;
+}
+
+.footer-social-container {
+  margin-right: 93px;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-text);
+
+  margin-bottom: 20px;
+}
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  .link {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--footer-icon-background);
+
+    transition: background-color var(--hover-duration) var(--timing-function);
+  }
+}
+
+.footer-icon {
+  display: inline-flex;
+  fill: var(--white-text);
+}
+
+.subscribe-mail-form {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: 12px;
+
+  color: var(--white-text);
+  background-color: transparent;
+  border: 1px solid var(--gray-border);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::placeholder {
+    color: var(--footer-text);
+  }
+}
+
+.footer-icon-send {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  fill: var(--white-text);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--white-text);
+}
