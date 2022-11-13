@@ -68,11 +68,25 @@ button {
 }
 
 .container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .container {
+    width: 1140px;
+  }
 }
 
 .section {
@@ -109,28 +123,39 @@ button {
 }
 
 .header {
+  position: relative;
   background-color: var(--white-background);
   border-bottom: 1px solid rgb(236, 236, 236);
 }
 .header .container {
   display: flex;
-  align-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header .container {
+    height: 60px;
+  }
+}
+.header .link {
+  color: var(--main-text);
 }
 .header .active-link {
   color: var(--accent-color);
   bottom: -1px;
 }
-.header .active-link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: var(--accent-color);
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .header .active-link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
 }
 .header .link:hover,
 .header .link:focus {
@@ -140,7 +165,7 @@ button {
 .logo-header {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
@@ -151,13 +176,49 @@ button {
   color: var(--accent-color);
 }
 
-.navigation {
-  margin-left: 93px;
+.burger-btn {
+  position: relative;
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+.burger-icon {
+  fill: var(--main-text);
+  width: 24px;
+  height: 16px;
+}
+
+.burger-close {
+  display: none;
+}
+
+.burger-btn.is-open .burger-close {
+  display: block;
+}
+
+.burger-btn.is-open .burger-menu {
+  display: none;
+}
+
+.header-wrap {
+  display: none;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 100%;
+  padding: 48px 40px;
+  background-color: var(--white-background);
+}
+.header-wrap.is-open {
+  display: block;
 }
 
 .nav-list {
   list-style-type: none;
-  display: flex;
 }
 .nav-list .link {
   position: relative;
@@ -165,12 +226,18 @@ button {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: var(--main-text);
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+@media screen and (max-width: 767px) {
+  .nav-list .link {
+    font-size: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .nav-list-item:nth-child(-n+2) {
@@ -179,7 +246,6 @@ button {
 
 .contacts {
   list-style-type: none;
-  display: flex;
   margin-left: auto;
   align-items: center;
 }
@@ -220,19 +286,15 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
 }
 .hero__title {
-  display: flex;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text);
-  max-width: 696px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -259,7 +321,6 @@ button {
 }
 .benefits__list {
   list-style-type: none;
-  display: flex;
 }
 .benefits__item {
   width: 270px;
@@ -297,6 +358,11 @@ button {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 1139px) {
+  .work {
+    display: none;
+  }
+}
 .work__title {
   font-weight: 700;
   font-size: 36px;
@@ -345,7 +411,6 @@ button {
 }
 .command__list {
   list-style-type: none;
-  display: flex;
 }
 .command__caption-wrap {
   padding-top: 30px;
@@ -406,9 +471,7 @@ button {
 }
 
 .company-list {
-  display: flex;
   list-style: none;
-  gap: 30px;
 }
 .company-list__link {
   display: flex;
@@ -731,11 +794,6 @@ button {
 }
 .address-list [rel] {
   color: var(--white-text);
-}
-
-.footer-container {
-  display: flex;
-  align-items: baseline;
 }
 
 .footer-address-container {
