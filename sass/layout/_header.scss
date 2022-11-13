@@ -64,12 +64,19 @@
   margin: 0;
   padding: 0;
   z-index: 999;
+
+  
 }
 
 .burger-icon {
   fill: var(--main-text);
   width: 24px;
   height: 16px;
+
+  .burger-btn &:hover,
+  .burger-btn &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .burger-close {
@@ -87,11 +94,9 @@
 .header-wrap {
   display: none;
   position: absolute;
-  top: -100%;
+  top: 0;
   left: 0%;
   width: 100%;
-
-
 
   padding: 48px 40px;
 
@@ -104,6 +109,13 @@
 
 .nav-list {
   list-style-type: none;
+  margin-bottom: 302px;
+
+  @media screen and (max-width: 767px) {
+    :not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
 
   .link {
     position: relative;
@@ -122,10 +134,9 @@
     @media screen and (max-width: 767px) {
       font-size: 40px;
       padding-top: 0px;
-    padding-bottom: 0px;
+      padding-bottom: 0px;
     }
   }
-
 }
 
 .nav-list-item:nth-child(-n + 2) {
@@ -133,10 +144,18 @@
 }
 
 .contacts {
+  display: flex;
   list-style-type: none;
 
   margin-left: auto;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+
+    align-items: start;
+    margin-bottom: 64px;
+  }
 
   .link {
     font-weight: 500;
@@ -149,6 +168,12 @@
     display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
+
+    @media screen and (max-width: 767px) {
+      padding: 0;
+      font-size: 24px;
+      text-align: left;
+    }
   }
 }
 
@@ -156,16 +181,61 @@
   display: flex;
   margin-right: 10px;
   fill: currentColor;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .contacts-list {
   .link {
     display: flex;
-    align-items: center;
 
     transition: color var(--hover-duration) var(--timing-function);
   }
   &:first-child {
     margin-right: 50px;
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
   }
+}
+
+@media screen and (max-width: 767px) {
+  .link.tel-link {
+    color: var(--accent-color);
+    font-size: 34px;
+    margin-bottom: 32px;
+  }
+}
+
+.header-socials {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  :not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+  }
+
+  .link {
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+    
+  }
+
+  :not(:last-child){
+      padding-right: 10px;
+    }
 }

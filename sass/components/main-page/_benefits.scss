@@ -1,6 +1,11 @@
 .benefits {
   padding-bottom: 0;
 
+  @media screen and (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
   &__list {
     list-style-type: none;
 
@@ -8,7 +13,7 @@
   }
 
   &__item {
-    width: 270px;
+    width: 100%;
     &:nth-child(-n + 3) {
       margin-right: 30px;
     }
@@ -24,6 +29,10 @@
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__icon {
@@ -41,6 +50,10 @@
     color: var(--main-text);
 
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {
