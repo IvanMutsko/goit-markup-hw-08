@@ -1,38 +1,28 @@
 .header {
-  position: relative;
   background-color: var(--white-background);
   border-bottom: 1px solid rgba(236, 236, 236, 1);
-
   .container {
     display: flex;
-    justify-content: space-between;
+    align-content: center;
     align-items: center;
+  }
 
-    @media screen and (max-width: 767px) {
-      height: 60px;
-    }
-  }
-  .link {
-    color: var(--main-text);
-  }
   .active-link {
     color: var(--accent-color);
     bottom: -1px;
 
-    @media screen and (min-width: 768px) {
-      &::after {
-        content: '';
-        display: block;
+    &::after {
+      content: '';
+      display: block;
 
-        position: absolute;
-        bottom: 0;
-        left: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
-        background-color: var(--accent-color);
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-      }
+      background-color: var(--accent-color);
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
     }
   }
 
@@ -45,7 +35,7 @@
 .logo-header {
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 
@@ -55,67 +45,13 @@
 .logo-web {
   color: var(--accent-color);
 }
-
-.burger-btn {
-  position: relative;
-  display: inline-flex;
-  border: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  z-index: 999;
-
-  
+.navigation {
+  margin-left: 93px;
 }
-
-.burger-icon {
-  fill: var(--main-text);
-  width: 24px;
-  height: 16px;
-
-  .burger-btn &:hover,
-  .burger-btn &:focus {
-    fill: var(--accent-color);
-  }
-}
-
-.burger-close {
-  display: none;
-}
-
-.burger-btn.is-open .burger-close {
-  display: block;
-}
-
-.burger-btn.is-open .burger-menu {
-  display: none;
-}
-
-.header-wrap {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 100%;
-
-  padding: 48px 40px;
-
-  background-color: var(--white-background);
-
-  &.is-open {
-    display: block;
-  }
-}
-
 .nav-list {
   list-style-type: none;
-  margin-bottom: 302px;
 
-  @media screen and (max-width: 767px) {
-    :not(:last-child) {
-      margin-bottom: 35px;
-    }
-  }
+  display: flex;
 
   .link {
     position: relative;
@@ -125,17 +61,12 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
+    color: var(--main-text);
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-
-    @media screen and (max-width: 767px) {
-      font-size: 40px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-    }
   }
 }
 
@@ -144,18 +75,11 @@
 }
 
 .contacts {
-  display: flex;
   list-style-type: none;
 
+  display: flex;
   margin-left: auto;
   align-items: center;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column-reverse;
-
-    align-items: start;
-    margin-bottom: 64px;
-  }
 
   .link {
     font-weight: 500;
@@ -168,12 +92,6 @@
     display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
-
-    @media screen and (max-width: 767px) {
-      padding: 0;
-      font-size: 24px;
-      text-align: left;
-    }
   }
 }
 
@@ -181,61 +99,16 @@
   display: flex;
   margin-right: 10px;
   fill: currentColor;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
 }
 
 .contacts-list {
   .link {
     display: flex;
+    align-items: center;
 
     transition: color var(--hover-duration) var(--timing-function);
   }
   &:first-child {
     margin-right: 50px;
-    @media screen and (max-width: 767px) {
-      margin-right: 0;
-    }
   }
-}
-
-@media screen and (max-width: 767px) {
-  .link.tel-link {
-    color: var(--accent-color);
-    font-size: 34px;
-    margin-bottom: 32px;
-  }
-}
-
-.header-socials {
-  display: flex;
-  list-style: none;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 10px;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-
-  :not(:last-child) {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-
-  }
-
-  .link {
-    text-decoration: none;
-
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-
-    color: var(--accent-color);
-    
-  }
-
-  :not(:last-child){
-      padding-right: 10px;
-    }
 }

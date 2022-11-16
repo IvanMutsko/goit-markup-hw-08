@@ -1,33 +1,36 @@
 .command {
   background-color: var(--grey-background);
-
-  @media screen and (max-width: 767px) {
-    padding-top: 60px;
-    padding-bottom: 30px;
-  }
-
   &__title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
 
     color: var(--main-text);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
     list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .photo {
+    width: 100%;
   }
 
   &__caption-wrap {
     padding-top: 30px;
     padding-bottom: 30px;
-
-    @media screen and (max-width: 767px) {
-      padding-bottom: 24px;
-    }
   }
 
   &__item {
@@ -37,12 +40,12 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    @media screen and (max-width: 767px) {
-    margin-bottom: 30px;
-    :last-child {
-      margin-bottom: 0;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
     }
-  }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 90px) / 4);
+    }
   }
 
   &__subtitle {
@@ -62,12 +65,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 16px;
-  }
-}
-
-.photo {
-  @media screen and (max-width: 767px) {
-    width: 100%;
   }
 }
 

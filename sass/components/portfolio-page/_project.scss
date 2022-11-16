@@ -3,9 +3,24 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: start;
+  }
 
   .item {
-    flex-basis: calc((100% - 60px) / 3);
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 60px) / 3);
+    }
+  }
+
+  img {
+    width: 450px;
   }
 
   .link {
@@ -54,7 +69,7 @@
   position: absolute;
   top: 0%;
   left: 0%;
-  transform: translateY(101%);
+  transform: translateY(110%);
   transition: transform var(--hover-duration) var(--timing-function);
 
   display: flex;
@@ -64,6 +79,7 @@
 
   color: var(--white-text);
   font-size: 18px;
+
   line-height: 1.56;
   letter-spacing: 0.03em;
   background: rgba(33, 150, 243, 0.9);
