@@ -1,12 +1,16 @@
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text);
 
   margin-bottom: 12px;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .field-title {
@@ -89,7 +93,9 @@
 }
 
 .modal-agree-text {
-  white-space: pre;
+  @media screen and (min-width: 1200px) {
+    white-space: pre;
+  }
 }
 
 .agree-link {

@@ -16,6 +16,7 @@
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --hover-duration: 250ms;
+  --gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 h1,
@@ -360,6 +361,7 @@ button {
     font-size: 34px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+    color: var(--accent-color);
     margin-bottom: 32px;
   }
 }
@@ -425,8 +427,7 @@ button {
 }
 .hero {
   background-color: var(--hero-background-color);
-  padding: 0;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-img.jpg);
+  padding: 0px 15px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -437,10 +438,36 @@ button {
   padding-bottom: 118px;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: var(--gradient), url(../images/bg-img-mob-1x.jpg);
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/bg-img-mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: var(--gradient), url(../images/bg-img-tablet-1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/bg-img-tablet-2x.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: var(--gradient), url(../images/bg-img-desktop-1x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/bg-img-desktop-2x.jpg);
   }
 }
 .hero__title {
@@ -884,11 +911,15 @@ button {
   transition: transform var(--hover-duration) var(--timing-function);
   text-align: center;
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 450px;
   background-color: var(--white-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .close-modal-btn {
@@ -914,11 +945,16 @@ button {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text);
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .field-title {
@@ -1002,8 +1038,10 @@ button {
   letter-spacing: 0.03em;
 }
 
-.modal-agree-text {
-  white-space: pre;
+@media screen and (min-width: 1200px) {
+  .modal-agree-text {
+    white-space: pre;
+  }
 }
 
 .agree-link {

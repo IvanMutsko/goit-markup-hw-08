@@ -157,15 +157,30 @@
           <h2 class="work__title">Чим ми займаємося</h2>
           <ul class="work__list">
             <li class="work__item">
-              <img src="./images/box1.jpg" alt="Написання коду" width="370" />
+              <img
+                srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                src="./images/box1.jpg"
+                alt="Написання коду"
+                width="370"
+              />
               <h3 class="work__subtitle">Десктопні додатки</h3>
             </li>
             <li class="work__item">
-              <img src="./images/box2.jpg" alt="Адаптація під пристрої" width="370" />
+              <img
+                srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                src="./images/box2.jpg"
+                alt="Адаптація під пристрої"
+                width="370"
+              />
               <h3 class="work__subtitle">Мобільні додатки</h3>
             </li>
             <li class="work__item">
-              <img src="./images/box3.jpg" alt="Розробка дизайну" width="370" />
+              <img
+                srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                src="./images/box3.jpg"
+                alt="Розробка дизайну"
+                width="370"
+              />
               <h3 class="work__subtitle">Дизайнерські рішення</h3>
             </li>
           </ul>
@@ -176,7 +191,35 @@
           <h2 class="command__title">Наша команда</h2>
           <ul class="command__list">
             <li class="command__item">
-              <img src="./images/igor.jpg" alt="Ігор Дем'яненко" width="270" class="photo" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/igor/igor-desktop-1x.jpg 1x,
+                    ./images/igor/igor-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/igor/igor-tablet-1x.jpg 1x, ./images/igor/igor-tablet-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/igor/igor-mob-1x.jpg 1x, ./images/igor/igor-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/igor/igor-desktop-1x.jpg 1x,
+                    ./images/igor/igor-desktop-2x.jpg 2x
+                  "
+                  src="./images/igor.jpg"
+                  alt="Ігор Дем'яненко"
+                  width="270"
+                  class="photo"
+                />
+              </picture>
+
               <div class="command__caption-wrap">
                 <h3 class="command__subtitle">Ігор Дем'яненко</h3>
                 <p class="command__text">Product Designer</p>
@@ -213,7 +256,34 @@
               </div>
             </li>
             <li class="command__item">
-              <img src="./images/olga.jpg" alt="Ольга Рєпіна" width="270" class="photo" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/olga/olga-desktop-1x.jpg 1x,
+                    ./images/olga/olga-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/olga/olga-tablet-1x.jpg 1x, ./images/olga/olga-tablet-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/olga/olga-mob-1x.jpg 1x, ./images/olga/olga-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/olga/olga-desktop-1x.jpg 1x,
+                    ./images/olga/olga-desktop-2x.jpg 2x
+                  "
+                  src="./images/olga.jpg"
+                  alt="Ольга Рєпіна"
+                  width="270"
+                  class="photo"
+                />
+              </picture>
               <div class="command__caption-wrap">
                 <h3 class="command__subtitle">Ольга Рєпіна</h3>
                 <p class="command__text">Frontend Developer</p>
@@ -250,7 +320,40 @@
               </div>
             </li>
             <li class="command__item">
-              <img src="./images/mykola.jpg" alt="Микола Тарасов" width="270" class="photo" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mykola/mykola-desktop-1x.jpg 1x,
+                    ./images/mykola/mykola-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola/mykola-tablet-1x.jpg 1x,
+                    ./images/mykola/mykola-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola/mykola-mob-1x.jpg 1x,
+                    ./images/mykola/mykola-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/mykola/mykola-desktop-1x.jpg 1x,
+                    ./images/mykola/mykola-desktop-2x.jpg 2x
+                  "
+                  src="./images/mykola.jpg"
+                  alt="Микола Тарасов"
+                  width="270"
+                  class="photo"
+                />
+              </picture>
               <div class="command__caption-wrap">
                 <h3 class="command__subtitle">Микола Тарасов</h3>
                 <p class="command__text">Marketing</p>
@@ -287,7 +390,40 @@
               </div>
             </li>
             <li class="command__item">
-              <img src="./images/mikhailo.jpg" alt="Михайло Єрмаков" width="270" class="photo" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mikhailo/mikhailo-desktop-1x.jpg 1x,
+                    ./images/mikhailo/mikhailo-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikhailo/mikhailo-tablet-1x.jpg 1x,
+                    ./images/mikhailo/mikhailo-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikhailo/mikhailo-mob-1x.jpg 1x,
+                    ./images/mikhailo/mikhailo-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/mikhailo/mikhailo-desktop-1x.jpg 1x,
+                    ./images/mikhailo/mikhailo-desktop-2x.jpg 2x
+                  "
+                  src="./images/mikhailo.jpg"
+                  alt="Михайло Єрмаков"
+                  width="270"
+                  class="photo"
+                />
+              </picture>
               <div class="command__caption-wrap">
                 <h3 class="command__subtitle">Михайло Єрмаков</h3>
                 <p class="command__text">UI Designer</p>
