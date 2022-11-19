@@ -8,6 +8,10 @@
 
   margin-bottom: 12px;
 
+  @media screen and (max-width: 460px) {
+    font-size: 18px;
+  }
+
   @media screen and (min-width: 1200px) {
     line-height: 1.15;
   }
@@ -79,6 +83,10 @@
     outline-color: var(--accent-color);
     fill: var(--accent-color);
   }
+
+  @media screen and (max-width: 460px) {
+    height: 80px;
+  }
 }
 
 .modal-agree-field {
@@ -87,15 +95,24 @@
   margin-bottom: 30px;
   align-items: center;
 
-  font-size: 14px;
+
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  @media screen and (max-width: 460px) {
+    font-size: 12px;
+    flex-wrap: wrap;
+    
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .modal-agree-text {
-  @media screen and (min-width: 1200px) {
-    white-space: pre;
-  }
+  white-space: pre;
 }
 
 .agree-link {
@@ -103,6 +120,7 @@
 }
 
 .checkbox-icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 8px;
@@ -122,6 +140,7 @@
   .modal-checkbox:checked + & {
     background-image: url(../images/icon-checked.svg);
     background-size: contain;
+    background-repeat: no-repeat;
     background-origin: border-box;
     border-color: transparent;
   }
