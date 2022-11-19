@@ -7,12 +7,13 @@
   background-color: var(--backdrop-color);
   opacity: 1;
   transition: opacity var(--hover-duration) var(--timing-function);
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    .modal {
-      transform: translate(-50%, -50%) scale(0.4);
-    }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  .modal {
+    transform: translate(-50%, -50%) scale(0.4);
   }
 }
 
