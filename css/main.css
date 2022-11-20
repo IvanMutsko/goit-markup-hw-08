@@ -188,12 +188,12 @@ button {
 }
 @media screen and (min-width: 768px) {
   .navigation {
-    margin-left: 93px;
+    margin-left: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .navigation {
-    margin-left: 0;
+    margin-left: 93px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -224,16 +224,17 @@ button {
   .contacts {
     list-style-type: none;
     display: flex;
-    margin-left: auto;
-    align-items: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 0;
+    gap: 10px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .contacts {
-    margin-left: 0;
-    flex-direction: column;
-    gap: 10px;
-    align-items: start;
+    margin-left: auto;
+    align-items: center;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 768px) {
@@ -245,13 +246,13 @@ button {
     text-decoration: none;
     color: var(--secondary-text);
     display: inline-block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .contacts .link {
-    padding: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -304,12 +305,17 @@ button {
   color: var(--accent-color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header .container {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
+  .header .container {
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
   .mobile-header {
     position: relative;
     display: flex;
@@ -389,12 +395,12 @@ button {
     margin-bottom: 32px;
   }
 }
-@media screen and (max-width: 767px) and (max-width: 380px) {
+@media screen and (max-width: 768px) and (max-width: 380px) {
   .menu-wrap .contacts-list:first-child {
     font-size: 26px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-wrap .contacts-list:last-child {
     font-weight: 500;
     font-size: 24px;
@@ -403,7 +409,7 @@ button {
     color: var(--secondary-text);
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-wrap .link {
     text-decoration: none;
     color: inherit;
@@ -412,7 +418,7 @@ button {
     color: var(--accent-color);
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-wrap .active-link {
     color: var(--accent-color);
   }
@@ -444,7 +450,7 @@ button {
   padding-right: 10px;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .mobile-header {
     display: none;
   }
@@ -462,12 +468,12 @@ button {
   padding-bottom: 118px;
   text-align: center;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .hero {
     background-image: var(--gradient), url(../images/bg-img-mob-1x.jpg);
   }
 }
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 768px) and (min-device-pixel-ratio: 2), screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 768px) and (min-resolution: 192dpi), screen and (max-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: var(--gradient), url(../images/bg-img-mob-2x.jpg);
   }
@@ -502,18 +508,14 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text);
-  max-width: 696px;
+  max-width: 360px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (max-width: 1199px) {
-  .hero__title {
-    max-width: 360px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .hero__title {
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -557,13 +559,9 @@ button {
 }
 .benefits__list {
   list-style-type: none;
-}
-@media screen and (min-width: 768px) {
-  .benefits__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 767px) {
   .benefits__item {
@@ -1284,6 +1282,7 @@ button {
   .subscribe-mail-form {
     margin-right: 12px;
     margin-bottom: 0;
+    max-width: 358px;
   }
 }
 
